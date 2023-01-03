@@ -1,8 +1,8 @@
 // Partials
-@use '../src/styles/partials/_global' as *;
-@use '../src/styles/partials/_variables' as *;
-@use '../src/styles/partials/_mixins' as *;
-// @use '../src/styles/partials/_typography' as *;
+@use './styles/partials/global' as *;
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
+// @use './styles/partials/typography' as *;
 
 
 .App {
