@@ -1,0 +1,24 @@
+// Partials
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+@use '../partials/typography';
+
+
+// Resets
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "AvenirNext", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
