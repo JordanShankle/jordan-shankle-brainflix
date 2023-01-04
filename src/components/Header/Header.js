@@ -1,5 +1,5 @@
 import './Header.scss';
-import BrainFlix from '../../assets/logo/BrainFlix-logo.svg'
+import BrainFlix from '../../assets/logo/BrainFlix-logo.svg';
 
 function Header() {
     return (
