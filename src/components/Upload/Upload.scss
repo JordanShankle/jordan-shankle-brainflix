@@ -1,9 +1,12 @@
+@use '../../styles/partials/global' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins';
 
 
 .button {
     background-color: $brainflix-blue;
     color: $white;
+
     border: none;
     width: 90%;
     margin: auto;
