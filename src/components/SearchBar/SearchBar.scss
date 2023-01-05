@@ -1,0 +1,14 @@
+.search {
+    display: flex;
+    justify-content: center;
+    
+
+    &__input {
+        display: flex;
+        justify-content: center;
+        height: 3rem;
+        width: 26rem;
+        background-image: url('../../assets/icons/search.svg');
+        background-repeat: no-repeat;
+    }
+}

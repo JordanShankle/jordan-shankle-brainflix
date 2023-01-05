@@ -15,42 +15,14 @@
     
     &__image {
         display: flex;
+        padding: 1.4rem;
     }
 
 
     &__form {
         display: flex;
         flex-direction: row;
-    }
-    
-    &__profile-image-container {
-        display: flex;
-    }
-
-    &__profile-image {
-        background-image: url(../../assets/images/Mohan-muruge.jpg);
-        background-size: cover;
-        background-position: left;
-        border-radius: 50%;
-        width: 3.6rem;
-        height: 3.6rem;
-        display: flex;
-        margin: 2.5rem 1.6rem;
-    }
-
-    &__search {
-        display: flex;
-        justify-content: center;
-        width: 90%;
-        height: 3rem;
-    }
-
-
-    &__button {
-        background-color: $brainflix-blue;
-        color: $white;
-        border: none;
-        width: 90%;
-        margin: auto;
+        justify-content: space-evenly;
+        padding-bottom: 1.6rem;
     }
 }
