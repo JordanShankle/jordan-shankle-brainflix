@@ -5,7 +5,7 @@ function Video (props) {
         poster={props.image}
         controls />
         
-        )
+    )
 };
 
 export default Video;

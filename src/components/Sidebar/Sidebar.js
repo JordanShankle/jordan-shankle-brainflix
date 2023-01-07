@@ -1,38 +1,29 @@
 // import { useState } from 'react';
-// import './Sidebar.scss';
+import './Sidebar.scss';
+import videos from '../../data/videos.json';
+import SideBarVid from '../SideBarVid/SideBarVid';
+
+function Sidebar (props) {
+    // const [sidebar, setSideBar] = useState('')
+// click event handler goes here that takes an event handler from App.js
+
+    return (
+        <>
+            <h3>Next Videos</h3>
+            {videos.map((video) => 
+                <SideBarVid 
+                image = {video.image}
+                title = {video.title}
+                channel = {video.channel}
+                key = {video.id}
+                clickHandler = {props.clickHandler}
+                />
+            )}
+        
+        </>
+
+    )
+};
 
 
-// function Sidebar (props) {
-    
-//     const [sidebar, setSideBar] = useState(props.sidebar)
-
-// Deconstruct the json data 
-// let { title, channel, image} = sideBar; 
-
-//     return (
-//         <section className='next-video-container'>
-
-//             <h2 className='next-video-title'>Next Title</h2>
-//             {
-//                 sidebar.map((video) => {
-                    
-//                     return (
-                    
-//                         <div className='video'>
-                        
-//                             <img src={video.image} alt="video" className='video__image' />
-                        
-//                             <h3>{video.title}</h3>
-                        
-//                             <p>{video.channel}</p>
-                        
-//                         </div>
-//                     )
-//                 } )
-//             }
-//         </section>
-//     )
-// };
-
-
-// export default Sidebar;
+export default Sidebar;
