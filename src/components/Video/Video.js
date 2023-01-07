@@ -1,12 +1,11 @@
+function Video (props) {
+    return (
+        <video 
+        className='main-video' 
+        poster={props.image}
+        controls />
+        
+        )
+};
 
-
-// const Video = (props) => {
-//     return (
-//         <section>
-//             <h3>{props.title}</h3>
-//             <p>{props.channel}</p>
-//         </section>
-//     )
-// };
-
-// export default Video;
+export default Video;

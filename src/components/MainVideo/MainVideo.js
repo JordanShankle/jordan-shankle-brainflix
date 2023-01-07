@@ -1,51 +1,28 @@
 import './MainVideo.scss';
-import mainVideo from '../../data/video-details.json';
-// import { useState } from 'react';
+import Video from '../Video/Video';
+import VideoDetails from '../VideoDetails/VideoDetails';
 
 
+const MainVideo = ({mainVideo}) => {
 
-
-function MainVideo() {
-
-    const videosData = mainVideo;
-    // const [videosData, setVideosData] = useState(videos);
+console.log(mainVideo.image)
 
     return (
-
-        <section>
-            <video className='main-video' controls >
-                <source src={videosData.image} />
-            </video>
-
-                {/* Title */}
-            <h2>{videosData.title}</h2>
-
-                {/* Channel */}
-            <div> {videosData.channel} </div>
-
-                {/* Timestamp */}
-            <div> {videosData.timestamp} </div>
+        <section className='main-video-container'>
             
-                {/* Views */}
-            <div> {videosData.views} </div>
+            <Video image={mainVideo.image}/>
+            <VideoDetails 
+                title={mainVideo.title}
+                channel={mainVideo.channel}
+                timestamp={mainVideo.timestamp}
+                views={mainVideo.views} 
+                likes={mainVideo.likes} 
+                description={mainVideo.description} 
+                />
 
-                {/* Likes */}
-            <div> {videosData.likes} </div>
-
-                {/* Description */}
-            <div> {videosData.description} </div>
         </section>
-
     )
 };
 
 
-
 export default MainVideo;
-
-// PseudoCode
-// Import the video data from the video.json file
-// Store the video data in a variable -- videoData
-// 
-// 
-// 

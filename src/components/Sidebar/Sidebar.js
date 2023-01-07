@@ -1,30 +1,38 @@
-import './Sidebar.scss';
-import Videos from '../../data/videos.json';
+// import { useState } from 'react';
+// import './Sidebar.scss';
 
-function Sidebar () {
+
+// function Sidebar (props) {
     
-    return (
-        <section>
+//     const [sidebar, setSideBar] = useState(props.sidebar)
 
-            {
-                Videos.map( video => {
-                    return (
-                        <div className='video'>
-                            <h3>
-                            {video.title}
-                            </h3>
-                            <p>
-                            {video.channel}
-                            </p>
-                            <img src={video.image} alt="hi" className='video__image' />
+// Deconstruct the json data 
+// let { title, channel, image} = sideBar; 
+
+//     return (
+//         <section className='next-video-container'>
+
+//             <h2 className='next-video-title'>Next Title</h2>
+//             {
+//                 sidebar.map((video) => {
+                    
+//                     return (
+                    
+//                         <div className='video'>
                         
-                        </div>
-                    )
-                } )
-            }
-        </section>
-    )
-};
+//                             <img src={video.image} alt="video" className='video__image' />
+                        
+//                             <h3>{video.title}</h3>
+                        
+//                             <p>{video.channel}</p>
+                        
+//                         </div>
+//                     )
+//                 } )
+//             }
+//         </section>
+//     )
+// };
 
 
-export default Sidebar;
+// export default Sidebar;

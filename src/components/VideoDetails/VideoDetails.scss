@@ -1,0 +1,21 @@
+.video-details {
+    display: flex;
+    flex-direction: column;
+
+    &-left {
+        display: flex;
+
+
+        &__item {
+            padding: 1rem;
+        }
+    }
+
+    &-right {
+        display: flex;
+
+        &__item {
+            padding: 1rem;
+        }
+    }
+}
