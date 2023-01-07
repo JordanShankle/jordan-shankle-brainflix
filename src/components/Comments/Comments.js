@@ -1,38 +1,31 @@
 import './Comments.scss';
-import CommentDetails from '../../data/video-details.json';
 
-function Comments() {
+const Comments = (props) => {
 
-    return (
-        <section>
+    console.log(props)
+            return (
+                <section className='comments-section'>
 
-            {
-                CommentDetails.map(comment => {
-                    return (
-                        <section className='comments-section'>
+                    <article className='comment-container'>
 
-                            <article className='comment-container'>
+                        <div className='comment__card-pic-container'>
+                            <div className='comment__card__pic'></div>
+                        </div>
 
-                                <div className='comment__card-pic-container'>
-                                    <div className='comment__card__pic'></div>
-                                </div>
+                        <div className='comment__card'>
+                            <div className='comment__text-container'>
+                                <p className='comment__name'>{props.name}</p>
+                                <p className='comment__date'>{props.timestamp}</p>
+                            </div>
+                            <p className='comment__text'>{props.comments}</p>
+                        </div>
 
-                                <div className='comment__card'>
-                                    <div className='comment__text-container'>
-                                        <p className='comment__name'>{CommentDetails.name}</p>
-                                        <p className='comment__date'>{CommentDetails.timestamp}</p>
-                                    </div>
-                                    <p className='comment__text'>{CommentDetails.comment}</p>
-                                </div>
+                    </article>
 
-                            </article>
+                </section>
 
-                        </section>
-                    )
-                })
-            }
-        </section>
-    )
+            )    
+
 }
 
 
@@ -46,5 +39,3 @@ export default Comments;
 
 // const Comments = CommentDetails;
 // Comments.map((details) => <Comments key={details.comments.id} name={details.comments.name} comment={details.comments.comment} timestamp={details.comments.timestamp} />);
-
-{/* {CommentDetails[0].comments[0].comment} */ }

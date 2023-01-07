@@ -5,11 +5,13 @@ import './App.scss';
 // Components
 import Header from './components/Header/Header';
 import MainVideo from './components/MainVideo/MainVideo';
+import JoinConvo from './components/JoinConvo/JoinConvo';
 // import Sidebar from './components/Sidebar/Sidebar';
 
 
 // Json Data for Videos 
 import videoData from './data/video-details.json';
+import commentsData from './data/video-details.json';
 // import Videos from './data/videos.json';
 
 
@@ -27,8 +29,8 @@ function App() {
   return (
     <>
       <Header />
-      <MainVideo mainVideo ={videoData[0]} />
-
+      <MainVideo mainVideo = {videoData[0]} />
+      <JoinConvo commentsData = {commentsData} />
 
       {/* <Sidebar SideBar={SideBarVideos} /> */}
     </>

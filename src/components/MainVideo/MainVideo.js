@@ -5,8 +5,6 @@ import VideoDetails from '../VideoDetails/VideoDetails';
 
 const MainVideo = ({mainVideo}) => {
 
-console.log(mainVideo.image)
-
     return (
         <section className='main-video-container'>
             
@@ -17,7 +15,8 @@ console.log(mainVideo.image)
                 timestamp={mainVideo.timestamp}
                 views={mainVideo.views} 
                 likes={mainVideo.likes} 
-                description={mainVideo.description} 
+                description={mainVideo.description}
+                numberOfComments={mainVideo.comments} 
                 />
 
         </section>

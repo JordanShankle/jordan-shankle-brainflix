@@ -29,6 +29,7 @@ function VideoDetails(props) {
                 <p className='video-details__description'>
                     {props.description}
                 </p>
+                {/* <h6>{props.comments}</h6> */}
             </div>
 
 
