@@ -13,11 +13,10 @@ import Sidebar from './components/Sidebar/Sidebar';
 // Json Data for Videos 
 import videoData from './data/video-details.json';
 import commentsData from './data/video-details.json';
-// import videos from './data/videos.json';
 
 
 
-let selected = {};
+let selectedVid = {};
 
 // App Component Function
 function App() {
@@ -27,31 +26,31 @@ function App() {
   
   
   const updatedVid = () => {
-    setVideoData(selected)
+    setVideoData(selectedVid)
   }
 
 
   ///////// click event  ////////////
-  const clickHandler = (e) => {
-    const newSelectedVideo = e.target.id
+  const clickHandler = (event) => {
+    const newSelectedVideo = event.target.id
 
-    let select = videoData.filter(vid => {
-      return vid.id === newSelectedVideo
+    let select = videoData.filter(video => {
+      return video.id === newSelectedVideo
     })
 
-    selected = select
+    selectedVid = select
     updatedVid()
-    console.log(videosData)
+    console.log(newSelectedVideo)
   }
 
 
   return (
     <>
       <Header />
-       <MainVideo mainVideo = {videoData[0]}  />
+      <MainVideo mainVideo = {videoData[0]}  />
       <JoinConvo commentsData = {commentsData} />
 
-      <Sidebar clickHandler={clickHandler} />
+      <Sidebar  clickHandler={clickHandler} />
     </>
   );
 }

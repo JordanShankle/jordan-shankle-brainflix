@@ -2,8 +2,12 @@ import './Comments.scss';
 
 const Comments = (props) => {
 
-    console.log(props)
-            return (
+    const comment = props.comment;
+
+    return (
+        <>
+        
+        {comment.map((comment) => 
                 <section className='comments-section'>
 
                     <article className='comment-container'>
@@ -24,18 +28,10 @@ const Comments = (props) => {
 
                 </section>
 
-            )    
-
+            )}   
+        </>    
+    )
 }
 
 
 export default Comments;
-
-// PseudoCode:
-// Import the Comments data from the video-details.json file
-// Store the Comments data in a variable 
-// .map through the comments data 
-
-
-// const Comments = CommentDetails;
-// Comments.map((details) => <Comments key={details.comments.id} name={details.comments.name} comment={details.comments.comment} timestamp={details.comments.timestamp} />);

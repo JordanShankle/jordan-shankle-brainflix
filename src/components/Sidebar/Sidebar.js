@@ -16,6 +16,7 @@ function Sidebar (props) {
                 title = {video.title}
                 channel = {video.channel}
                 key = {video.id}
+                id = {video.id}
                 clickHandler = {props.clickHandler}
                 />
             )}

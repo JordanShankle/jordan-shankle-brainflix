@@ -4,9 +4,6 @@ import './JoinConvo.scss';
 
 const JoinConvo = ({commentsData}) => {
     
-    console.log(commentsData)
-    
-    
     return (
         <>
         {
@@ -18,16 +15,8 @@ const JoinConvo = ({commentsData}) => {
             })
         }
         </>
-        // form
         );
 };
 
-
-        // < Comments
-        // key={comment.id}
-        // name={comment.name}
-        // comment={comment.comment}
-        // date={comment.timestamp} />
-        // )
 
 export default JoinConvo;
