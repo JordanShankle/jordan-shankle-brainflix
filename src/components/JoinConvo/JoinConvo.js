@@ -6,10 +6,6 @@ import './JoinConvo.scss';
 const JoinConvo = ({ selectedVideo }) => {
 
 
-  
-
-        // console.log(videosDetails);
-
     return (
         <section className="conversation-container">
 

@@ -42,7 +42,7 @@ function App() {
       return video.id === newSelectedVideo
     })
 
-    setMainVideoData(videoData[1]);
+    setMainVideoData(videoData[0]);
 
     updatedVid()
     console.log(newSelectedVideo)
