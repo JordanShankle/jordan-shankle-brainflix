@@ -9,7 +9,7 @@ function Sidebar (props) {
 
     return (
         <>
-            <h3>Next Videos</h3>
+            <p className='next-vid-title'>NEXT VIDEOS</p>
             {videos.map((video) => 
                 <SideBarVid 
                 image = {video.image}

@@ -2,20 +2,39 @@
     display: flex;
     flex-direction: column;
 
+    
     &-left {
         display: flex;
+        justify-content: space-between;
 
 
         &__item {
             padding: 1rem;
+            font-weight: 600;
+
+
+            &__views {
+            background-image: url(../../assets/icons/views.svg);
+            background-repeat: no-repeat;
+            background-position-x: left 50%;
         }
     }
+    }
+
 
     &-right {
         display: flex;
+        justify-content: space-between;
+
 
         &__item {
             padding: 1rem;
+           
+            &__likes {
+                background-image: url(../../assets/icons/likes.svg);
+                background-repeat: no-repeat;
+            }
+
         }
     }
 }

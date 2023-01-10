@@ -12,7 +12,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 // Json Data for Videos 
 import videoData from './data/video-details.json';
-import commentsData from './data/video-details.json';
+import videosDetails from './data/video-details.json';
 
 
 
@@ -21,12 +21,16 @@ let selectedVid = {};
 // App Component Function
 function App() {
   
+  // For the Comments
+  const [selectedVideoDetails, setSelectedVideoDetails] = useState(videosDetails[0])
+  
   // useState that takes in the Video Data 
   const [videosData, setVideoData] = useState(videoData[0].title);
-  
+  const [mainVideosData, setMainVideoData] = useState(videoData[0]);
   
   const updatedVid = () => {
     setVideoData(selectedVid)
+    // setSelectedVideoDetails => based on id... FIND in videosDetails where videosDetails id === selectedVid.id
   }
 
 
@@ -34,11 +38,12 @@ function App() {
   const clickHandler = (event) => {
     const newSelectedVideo = event.target.id
 
-    let select = videoData.filter(video => {
+    let select = videosData.filter(video => {
       return video.id === newSelectedVideo
     })
 
-    selectedVid = select
+    setMainVideoData(videoData[1]);
+
     updatedVid()
     console.log(newSelectedVideo)
   }
@@ -47,8 +52,8 @@ function App() {
   return (
     <>
       <Header />
-      <MainVideo mainVideo = {videoData[0]}  />
-      <JoinConvo commentsData = {commentsData} />
+      <MainVideo mainVideo = {mainVideosData}  />
+      <JoinConvo selectedVideo = {selectedVideoDetails} />
 
       <Sidebar  clickHandler={clickHandler} />
     </>

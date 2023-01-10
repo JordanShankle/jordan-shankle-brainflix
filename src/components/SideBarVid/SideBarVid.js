@@ -10,7 +10,7 @@ function SideBarVid (props) {
             </div>
 
             <div className="video-description">
-                <p className="video-description__title">{props.title}</p>
+                <h6 className="video-description__title">{props.title}</h6>
                 <p className="video-description__channel">{props.channel}</p>
             </div>
         

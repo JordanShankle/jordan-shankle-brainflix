@@ -1,5 +1,19 @@
 .video {
     display: flex;
 
+    &__image {
+        width: 15rem;
+        height: 10rem;
+        border-radius: 4px;
+    }
 
+    &-description {
+        padding: 1.0rem;
+    }
+
+    &-description__title {
+        margin: 0%;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
 }

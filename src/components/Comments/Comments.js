@@ -1,35 +1,36 @@
 import './Comments.scss';
 
-const Comments = (props) => {
+const Comments = ({ comments }) => {
 
-    const comment = props.comment;
+    // const comments = props.comments;
 
     return (
-        <>
-        
-        {comment.map((comment) => 
-                <section className='comments-section'>
 
-                    <article className='comment-container'>
+        <section className='comments-section'>
+            {comments.map((comment) =>
 
-                        <div className='comment__card-pic-container'>
-                            <div className='comment__card__pic'></div>
+
+                <article className='comment-container'>
+
+                    <div className='comment__card-pic-container'>
+                        <div className='comment__card__pic'></div>
+                    </div>
+
+                    <div className='comment__card'>
+                        <div className='comment__text-container'>
+                            <p className='comment__name'>{comment.name}</p>
+                            <p className='comment__date'>{new Date(comment.timestamp).toLocaleDateString("en-us")}</p>
                         </div>
+                        <p className='comment__text'>{comment.comment}</p>
+                    </div>
 
-                        <div className='comment__card'>
-                            <div className='comment__text-container'>
-                                <p className='comment__name'>{props.name}</p>
-                                <p className='comment__date'>{props.timestamp}</p>
-                            </div>
-                            <p className='comment__text'>{props.comments}</p>
-                        </div>
+                </article>
 
-                    </article>
 
-                </section>
+            )}
 
-            )}   
-        </>    
+        </section>
+
     )
 }
 
