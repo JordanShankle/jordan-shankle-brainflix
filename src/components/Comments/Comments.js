@@ -2,7 +2,6 @@ import './Comments.scss';
 
 const Comments = ({ comments }) => {
 
-    // const comments = props.comments;
 
     return (
 
@@ -10,7 +9,7 @@ const Comments = ({ comments }) => {
             {comments.map((comment) =>
 
 
-                <article className='comment-container'>
+                <article className='comment-container' key={comment.id}>
 
                     <div className='comment__card-pic-container'>
                         <div className='comment__card__pic'></div>

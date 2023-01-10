@@ -3,11 +3,9 @@ import viewsIcon from '../../assets/icons/views.svg';
 import likesIcon from '../../assets/icons/likes.svg';
 
 function VideoDetails(props) {
-    
-    console.log(props);
 
     return (
-        <section className='video-details'>
+        <section className='video-details' key={props.id}>
             <h2 className='video-details__title'>{props.title}</h2>
 
                 <div className='video-details-left'>

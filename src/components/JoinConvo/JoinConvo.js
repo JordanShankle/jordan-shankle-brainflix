@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Comments from '../Comments/Comments';
 import './JoinConvo.scss';
 
@@ -34,13 +33,6 @@ const JoinConvo = ({ selectedVideo }) => {
 
             <Comments comments={selectedVideo.comments} />
 
-            {/* {
-                videosDetails.map((vidDetails) => {
-                    return (
-                        <Comments comments={vidDetails.comments} />
-                    )
-                })
-            } */}
         </section>
     );
 };

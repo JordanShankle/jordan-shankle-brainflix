@@ -3,7 +3,9 @@ import './SideBarVid.scss';
 function SideBarVid (props) {
     
     return (
-        <section className='video' onClick={props.clickHandler} id={props.id}>
+        <section className='video' onClick={() => {
+            props.clickHandler(props.id)
+        }} id={props.id}>
             
             <div className='video-image-container'>
                 <img className='video__image' src={props.image} alt="video"/>
