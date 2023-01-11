@@ -1,6 +1,7 @@
+// Partials
 // @use '../../styles/partials/global' as *;
 @use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins';
+@use '../../styles/partials/mixins' as *;
 
 .profile {
     display: flex;

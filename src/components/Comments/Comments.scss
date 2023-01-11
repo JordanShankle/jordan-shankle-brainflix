@@ -1,4 +1,7 @@
+// Partials
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
 
 .comment {
     width: 100%;

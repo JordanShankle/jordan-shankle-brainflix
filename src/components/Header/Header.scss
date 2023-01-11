@@ -1,7 +1,7 @@
 // Partials
 // @use '../../styles/partials/global' as *;
 @use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins';
+@use '../../styles/partials/mixins' as *;
 
 
 .header {
@@ -10,9 +10,9 @@
     border-bottom: 0.2rem solid $mercury;
     padding-bottom: 1.0rem;
 
-    // @include tablet {
-    //     flex-direction: row;
-    // }
+    @include tablet {
+        flex-direction: row;
+    }
 
     &__image-container {
         display: flex;
