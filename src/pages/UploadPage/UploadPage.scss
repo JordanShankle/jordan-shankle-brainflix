@@ -1,0 +1,63 @@
+// @use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins';
+
+.upload {
+    
+    &-title {
+        font-size: 2.4rem;
+    }
+
+    &-thumbnail {
+        color: $silver;
+        margin: 0;
+        padding-bottom: 0.5rem;
+
+        &__image {
+            width: 30rem;
+            border-radius: 0.4rem;
+            margin-bottom: 1.0rem;
+        }
+    }
+
+    &__title {
+        color: $silver;
+        
+        &__text {
+            height: 4.0rem;
+            margin-top: 0.5rem;
+            border-radius: 0.4rem;
+        }
+    }
+
+    &__description {
+        color: $silver;
+
+        &__text {
+            height: 8.0rem;
+            margin-top: 0.5rem;
+            padding: 1.0rem;
+            border-radius: 0.4rem;
+        }
+    }
+
+    &__button {
+        background-color: $brainflix-blue;
+        color: $white;
+        border: none;
+        width: 90%;
+        margin: auto;
+        height: 4.0rem;
+        border-radius: 0.4rem;
+        background-image: url('../../assets/icons/publish.svg');
+        background-position-y: center;
+        background-position-x: 1rem;
+        background-repeat: no-repeat;
+    }
+
+    &__cancel {
+        color: $brainflix-blue;
+        display: flex;
+        justify-content: center;
+    }
+}

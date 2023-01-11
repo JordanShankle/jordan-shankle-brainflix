@@ -1,6 +1,11 @@
 // Sass
 import './App.scss';
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Pages
+import UploadPage from './pages/UploadPage/UploadPage';
+
 
 // Components
 import Header from './components/Header/Header';
@@ -22,7 +27,7 @@ function App() {
 
 
 
-  ///////// click event  ////////////
+   // Click Event
   const clickHandler = (id) => {
 
     let selected = videosDetails.find(video => {
@@ -34,12 +39,20 @@ function App() {
 
 
   return (
-    <>
+    <Router>
       <Header />
-      <MainVideo mainVideo={selectedVideoDetails} />
+
+      <Routes>
+        <Route path='/upload' element={<UploadPage selectedVideo={selectedVideoDetails}/>} />
+      </Routes>
+
+
+      {/* <MainVideo mainVideo={selectedVideoDetails} />
       <JoinConvo selectedVideo={selectedVideoDetails} />
-      <Sidebar clickHandler={clickHandler} selectedVideo={selectedVideoDetails}  />
-    </>
+      <Sidebar clickHandler={clickHandler} selectedVideo={selectedVideoDetails}  /> */}
+
+
+    </Router>
   );
 }
 

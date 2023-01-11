@@ -6,11 +6,11 @@
 .button {
     background-color: $brainflix-blue;
     color: $white;
-
     border: none;
     width: 90%;
     margin: auto;
     height: 4.0rem;
+    border-radius: 0.4rem;
     background-image: url('../../assets/icons/upload.svg');
     background-position-y: center;
     background-position-x: 1rem;
