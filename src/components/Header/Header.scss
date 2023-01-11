@@ -10,6 +10,10 @@
     border-bottom: 0.2rem solid $mercury;
     padding-bottom: 1.0rem;
 
+    // @include tablet {
+    //     flex-direction: row;
+    // }
+
     &__image-container {
         display: flex;
         justify-content: center;
@@ -26,6 +30,5 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        padding-bottom: 1.6rem;
     }
 }

@@ -1,5 +1,6 @@
 import './UploadPage.scss';
 import uploadPreview from '../../assets/images/Upload-video-preview.jpg';
+import { Link } from 'react-router-dom';
 
 function UploadPage() {
     return (
@@ -17,13 +18,18 @@ function UploadPage() {
 
                 <label className="upload__description">ADD A VIDEO DESCRIPTION
 
-                    <input type='text' name="description" placeholder="Add a description to your video" className="upload__description__text"></input>
+                    <textarea type='text' name="description" placeholder="Add a description to your video" className="upload__description__text"></textarea>
 
                 </label>
 
-                <button className='upload__button'>PUBLISH</button>
+                <Link to='/' >
+                    <button className='upload__button'>PUBLISH</button>
+                </Link>
 
-                <p className='upload__cancel'>CANCEL</p>
+                <Link to='/' >
+                    <p className='upload__cancel'>CANCEL</p>
+                </Link>
+
 
             </form>
 
