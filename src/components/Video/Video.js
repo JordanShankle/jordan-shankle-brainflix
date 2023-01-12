@@ -1,12 +1,19 @@
 import './Video.scss';
+import { Link } from 'react-router-dom';
 
-function Video (props) {
+
+function Video({ image, videoId }) {
     return (
-        <video 
-        className='main-video' 
-        poster={props.image}
-        controls />
-        
+
+        <Link to={`/videos/${videoId}`}>
+
+            <video
+                className='main-video'
+                poster={image}
+                controls />
+
+        </Link>
+
     )
 };
 

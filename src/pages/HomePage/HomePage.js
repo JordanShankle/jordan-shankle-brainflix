@@ -10,9 +10,13 @@ import videosDetails from '../../data/video-details.json';
 
 function HomePage() {
 
+  
+
+
+
+
  // For the Comments
   const [selectedVideoDetails, setSelectedVideoDetails] = useState(videosDetails[0])
-
 
   // Click Event
  const clickHandler = (id) => {
