@@ -4,13 +4,26 @@ import videos from '../../data/videos.json';
 import SideBarVid from '../SideBarVid/SideBarVid';
 
 function Sidebar (props) {
-    // const [sidebar, setSideBar] = useState('')
-// click event handler goes here that takes an event handler from App.js
 
-// filter all videos so we don't show the selected vid thumbnail
 
+// const { videoId } = useParams();
+// const [video, setVideo] = useState(null);
+
+// useEffect(() => {
+//     const getVideo = async () => {
+//         const { data } = await axios.get(
+//             `${url}${videoId}`
+//             );
+//             setVideo(data);
+//         }
+        
+//         getVideo();
+//     }, [videoId])
+    
+    
+    // filter all videos so we don't show the selected vid thumbnail
  const filteredVids = videos.filter(vid => vid.id !== props.selectedVideo.id)
-
+    
     return (
         <>
             <p className='next-vid-title'>NEXT VIDEOS</p>
@@ -20,7 +33,7 @@ function Sidebar (props) {
                 title = {video.title}
                 channel = {video.channel}
                 key = {video.id}
-                id = {video.id}
+                videoId = {video.id}
                 clickHandler = {props.clickHandler}
                 />
             )}

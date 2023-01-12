@@ -12,8 +12,9 @@ function VideoDetails({ title, videoId, channel, views, timestamp, likes, descri
                     <div className='video-details-left__item'>
                         By {channel}
                     </div>
+                    
                     <div className='video-details-left__item__views'>
-                    <img src={viewsIcon} alt="views icon" />{views}
+                        <img src={viewsIcon} alt="views icon" />{views}
                     </div>
                 </div>
 

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // Components
-import Video from "../../components/Video/Video";
-import VideoDetails from "../../components/VideoDetails/VideoDetails";
+// import Video from "../../components/Video/Video";
+// import VideoDetails from "../../components/VideoDetails/VideoDetails";
 
 // Base URL
 const BASE_API_URL = 'https://project-2-api.herokuapp.com/';
@@ -23,9 +23,9 @@ console.log(`Use this url: ${url}`)
 
 
 
-const VideosView = () => {
+const VideoView = () => {
     const { videoId } = useParams();
-    const [video, setVideo] = useState(null);
+    const [video, setVideo] = useState({});
 
     useEffect(() => {
         const getVideo = async () => {
@@ -36,15 +36,14 @@ const VideosView = () => {
         }
 
         getVideo();
-    }, [videoId])
+    }, [])
     
     
     return (
         <>
-            <Video />
-            <VideoDetails />
+            <h1>This is where the videos go.</h1>
         </>
     )
 }
 
-export default VideosView;
+export default VideoView;

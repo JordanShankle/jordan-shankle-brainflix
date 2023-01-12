@@ -4,19 +4,18 @@ import './App.scss';
 // React Modules
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
 // Pages
 import UploadPage from './pages/UploadPage/UploadPage';
 
-
 // Components
 import HomePage from './pages/HomePage/HomePage';
-import VideosView from './pages/VideosView/VideosView';
+import VideoPage from './pages/VideoPage/VideoPage';
 import Header from './components/Header/Header';
 
 
+
 // App Component Function
-function App() {
+const App = () => {
 
   return (
     <Router>
@@ -24,7 +23,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/videos/:videoId' element={<VideosView />} />
+        <Route path='/videos/:videoId' element={<VideoPage />} />
         <Route path='/upload' element={<UploadPage />} />
       </Routes>
 
