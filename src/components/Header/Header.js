@@ -4,38 +4,41 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <header className='header'>
+        <>
+            <header className='header header--mobile'>
 
-            <Link to='/'>
-                <div className="header__logo-container">
-                    <img className="header__logo" src={BrainFlix}
-                        alt='BrainFlix logo' />
+                <Link to='/'>
+                    <div className="header__logo-container">
+                        <img className="header__logo" src={BrainFlix}
+                            alt='BrainFlix logo' />
+                    </div>
+                </Link>
+
+                <div className='header__search'>
+                    <form className='header__form'>
+                        <label className='search'>
+                            <input type='text' placeholder='Search' name='search' className='search__input' />
+                        </label>
+                    </form>
+
+
+                    <div>
+                        <div className="header-profile__image header-profile__image--mobile"></div>
+                    </div>
                 </div>
-            </Link>
 
-            <div className='header__search'>
-                <form className='header__form'>
-                    <label className='search'>
-                        <input type='text' placeholder='Search' name='search' className='search__input' />
-                    </label>
-                </form>
+                <Link to='/upload'>
+                    <button className='button'>UPLOAD</button>
+                </Link>
+
+                    <div>
+                        <div className="header-profile__image--tablet header-profile__image"></div>
+                    </div>
+            </header>
+        </>
 
 
-                <div className="header-profile header-profile--mobile">
-                    <div className="header-profile__image"></div>
-                </div>
 
-            </div>
-
-            <Link to='/upload'>
-                <button className='button'>UPLOAD</button>
-            </Link>
-
-            <div className="header-profile--tablet">
-                <div className="header-profile__image"></div>
-            </div>
-
-        </header>
     )
 };
 

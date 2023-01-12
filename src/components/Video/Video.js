@@ -1,3 +1,5 @@
+import './Video.scss';
+
 function Video (props) {
     return (
         <video 
