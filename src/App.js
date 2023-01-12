@@ -9,7 +9,6 @@ import UploadPage from './pages/UploadPage/UploadPage';
 
 // Components
 import HomePage from './pages/HomePage/HomePage';
-import VideoPage from './pages/VideoPage/VideoPage';
 import Header from './components/Header/Header';
 
 
@@ -23,7 +22,7 @@ const App = () => {
 
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/videos/:videoId' element={<VideoPage />} />
+        <Route path='/videos/:videoId' element={<HomePage />} />
         <Route path='/upload' element={<UploadPage />} />
       </Routes>
 

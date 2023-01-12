@@ -1,49 +1,48 @@
 // imports
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import axios from "axios";
+// import { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 // Components
-// import Video from "../../components/Video/Video";
-// import VideoDetails from "../../components/VideoDetails/VideoDetails";
+import MainVideo from "../../components/MainVideo/MainVideo";
+import JoinConvo from "../../components/JoinConvo/JoinConvo";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import videosDetails from "../../components/VideoDetails/VideoDetails";
 
-// Base URL
+// API //
 const BASE_API_URL = 'https://project-2-api.herokuapp.com/';
-
-// API Key
 const API_KEY = 'eaf1ac38-9344-4d16-9027-16b9fd369494';
-
-// Query
 const query = "videos";
-
-// URL
 const url = `${BASE_API_URL}${query}?api_key=${API_KEY}`;
-
 console.log(`Use this url: ${url}`)
 
 
 
-const VideoView = () => {
-    const { videoId } = useParams();
-    const [video, setVideo] = useState({});
+const VideoPage = () => {
 
-    useEffect(() => {
-        const getVideo = async () => {
-            const { data } = await axios.get(
-                `${url}${videoId}`
-            );
-            setVideo(data);
-        }
+   // For the Comments
+  const [selectedVideoDetails, setSelectedVideoDetails] = useState(videosDetails[0])
 
-        getVideo();
-    }, [])
-    
-    
+  // Click Event
+  const clickHandler = (id) => {
+
+    let selected = videosDetails.find(video => {
+      return video.id === id
+    })
+
+    setSelectedVideoDetails(selected)
+  }
+
     return (
-        <>
-            <h1>This is where the videos go.</h1>
-        </>
+        <main>
+
+            <MainVideo mainVideo={selectedVideoDetails} />
+            <JoinConvo selectedVideo={selectedVideoDetails} />
+            <Sidebar clickHandler={clickHandler} selectedVideo={selectedVideoDetails} />
+
+        </main>
     )
 }
 
-export default VideoView;
+export default VideoPage;

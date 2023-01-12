@@ -8,8 +8,8 @@ import MainVideo from '../../components/MainVideo/MainVideo';
 import JoinConvo from '../../components/JoinConvo/JoinConvo';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
-// Videos Data from the Json file
-import videosDetails from '../../data/video-details.json';
+
+
 
 
 // Base URL
@@ -30,19 +30,42 @@ console.log(`Use this url: ${url}`)
 
 function HomePage() {
 
+  console.log(`rednering homepage`)
+
   const { videoId } = useParams();
-  const [video, setVideo] = useState([]);
+  const [videos, setVideos] = useState(null);
+  const [selectedVideoDetails, setSelectedVideoDetails] = useState(null)
 
   useEffect(() => {
-    const getVideo = async () => {
+    const getVideos = async () => {
       const { data } = await axios.get(
-        `${url}${videoId}`
+        `${url}`
       );
-      setVideo(data);
+      setVideos(data);
       console.log(data);
     }
 
-    getVideo();
+    getVideos();
+  }, [])
+
+  useEffect(() => {
+
+    console.log(videoId)
+    const id = videoId || '84e96018-4022-434e-80bf-000ce4cd12b8'
+    const url = `${BASE_API_URL}videos/${id}?api_key=${API_KEY}`
+
+    const getVideo = async () => {
+      const { data } = await axios.get(
+        `${url}`
+      );
+
+      setSelectedVideoDetails(data);
+    }
+
+    getVideo()
+
+
+
   }, [videoId])
 
 
@@ -50,16 +73,22 @@ function HomePage() {
 
 
   // For the Comments
-  const [selectedVideoDetails, setSelectedVideoDetails] = useState(videosDetails[0])
 
-  // Click Event
-  const clickHandler = (id) => {
 
-    let selected = videosDetails.find(video => {
-      return video.id === id
-    })
+  // // Click Event
+  // const clickHandler = (id) => {
 
-    setSelectedVideoDetails(selected)
+  //   let selected = videosDetails.find(video => {
+  //     return video.id === id
+  //   })
+
+  //   setSelectedVideoDetails(selected)
+  // }
+
+ 
+
+  if (!videos || !selectedVideoDetails){
+return <div>loading...</div>
   }
 
   return (
@@ -67,7 +96,7 @@ function HomePage() {
 
       <MainVideo mainVideo={selectedVideoDetails} />
       <JoinConvo selectedVideo={selectedVideoDetails} />
-      <Sidebar clickHandler={clickHandler} selectedVideo={selectedVideoDetails} />
+      <Sidebar selectedVideo={selectedVideoDetails} videos={videos} />
 
     </main>
   )
