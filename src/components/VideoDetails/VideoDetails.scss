@@ -6,45 +6,45 @@
     display: flex;
     flex-direction: column;
 
-    
-    &-left {
+    &-info-container {
         display: flex;
         justify-content: space-between;
+        margin: 1.6rem;
+        color: $silver;
+        border-bottom: 0.2rem solid $mercury;
+        padding-bottom: 1.6rem;
+        
+    }
 
 
-        &__item {
-            padding: 1rem;
+    &__title {
+        padding: 1.6rem 0;
+        margin: 0 1.6rem;
+        border-bottom: 0.2rem solid $mercury;
+    }
+
+    &-info {
+
+        &__channel {
+            padding-bottom: 1.6rem;
             font-weight: 600;
-
-
-            &__views {
-            background-image: url(../../assets/icons/views.svg);
-            background-repeat: no-repeat;
-            background-position-x: left 50%;
+            color: black;
+        }
+        
+        &__views {
+            padding-bottom: 1.6rem;
         }
     }
+
+
+    &__description {
+        padding: 0 1.6rem;
     }
 
-
-    &-right {
-        display: flex;
-        justify-content: space-between;
-
-
-        &__item {
-            padding: 1rem;
-           
-            &__likes {
-                background-image: url(../../assets/icons/likes.svg);
-                background-repeat: no-repeat;
-            }
-
-        }
-    }
 }
 
 .number-comments {
     font-weight: 600;
     font-size: 1.6rem;
-    margin: 0%;
+    margin: 1.6rem;
 }

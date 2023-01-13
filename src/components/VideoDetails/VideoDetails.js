@@ -8,25 +8,31 @@ function VideoDetails({ title, videoId, channel, views, timestamp, likes, descri
         <section className='video-details' key={videoId}>
             <h2 className='video-details__title'>{title}</h2>
 
-                <div className='video-details-left'>
-                    <div className='video-details-left__item'>
-                        By {channel}
+                <div className='video-details-info-container'>
+                    <div className='video-details-info'>
+                        <div className='video-details-info__channel'>
+                            By {channel}
+                        </div>
+                        
+                        <div className='video-details-info__date'>
+                            {new Date(timestamp).toLocaleDateString("en-us")}
+                        </div>
                     </div>
-                    
-                    <div className='video-details-left__item__views'>
-                        <img src={viewsIcon} alt="views icon" />{views}
+
+
+
+                    <div className='video-details-info'>
+                        <div className='video-details-info__views'>
+                            <img src={viewsIcon} alt="views icon" />{views}
+                        </div>
+                        
+                        <div className='video-details-right__likes'>
+                            <img src={likesIcon} alt="views icon" className='likes__icon' />{likes}
+                        </div>
                     </div>
                 </div>
 
-                <div className='video-details-right'>
-                    <div className='video-details-right__item'>
-                        {new Date(timestamp).toLocaleDateString("en-us")}
-                    </div>
-                    
-                    <div className='video-details-right__item__likes'>
-                    <img src={likesIcon} alt="views icon" />{likes}
-                    </div>
-                </div>
+
 
             <div>
                 <p className='video-details__description'>

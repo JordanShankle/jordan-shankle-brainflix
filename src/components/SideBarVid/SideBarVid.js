@@ -5,7 +5,7 @@ function SideBarVid({ videoId, image, title, channel }) {
 
 
     return (
-        <Link to={`/videos/${videoId}`}>
+        <Link to={`/videos/${videoId}`} className="video-link">
         
             <section className='video' key={videoId}  >
 
