@@ -1,8 +1,11 @@
 import './Header.scss';
 import BrainFlix from '../../assets/logo/BrainFlix-logo.svg';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+    const navigate = useNavigate();
+    
     return (
         <>
             <header className='header header--mobile'>
@@ -23,17 +26,14 @@ function Header() {
 
 
                     <div>
-                        <div className="header-profile__image header-profile__image--mobile"></div>
+                        <div className="header-profile__image"></div>
                     </div>
                 </div>
 
-                <Link to='/upload'>
-                    <button className='button'>UPLOAD</button>
-                </Link>
+                
+                <button className='button' onClick={() => navigate("/upload")}>UPLOAD</button>
 
-                    <div>
-                        <div className="header-profile__image--tablet header-profile__image"></div>
-                    </div>
+            
             </header>
         </>
 

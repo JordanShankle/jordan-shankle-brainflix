@@ -6,7 +6,7 @@
 // Header
 .header {
     border-bottom: 0.2rem solid $mercury;
-    padding-bottom: 1.0rem;
+    padding: 0 1.6rem 1.0rem 1.6rem;
 
     
     @include tablet {
@@ -42,20 +42,6 @@
         height: 3.6rem;
         display: flex;
         margin-left: 1.0rem;
-
-        &--mobile {
-             @include tablet {
-                 display: none;
-             }
-        }
-
-        &--tablet {
-            display: none; 
-
-            @include tablet {
-                display: block;
-            }
-        }
     }
 }
 
