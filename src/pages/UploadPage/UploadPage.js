@@ -1,18 +1,16 @@
 import './UploadPage.scss';
 import uploadPreview from '../../assets/images/Upload-video-preview.jpg';
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import axios from 'axios';
 
 function UploadPage() {
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
+    // const [title, setTitle] = useState("");
+    // const [description, setDescription] = useState("");
 
     const navigate = useNavigate();
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        console.log("test");
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+    //     console.log("test");
         
 
         // Validate
@@ -36,40 +34,48 @@ function UploadPage() {
 
         // } catch (error) {
         //     console.log(`There was an ${error}`)
-        }
+        //}
 
 
 
     return (
         <>
             <h2 className='upload-title'>Upload Video</h2>
-            <p className='upload-thumbnail'>VIDEO THUMBNAIL</p>
-            <img src={uploadPreview} alt="bike handle bars" className='upload-thumbnail__image' />
+            
+            <p className='upload-thumbnail__title'>VIDEO THUMBNAIL</p>
+            
+            <div className='upload-thumbnail'>
+                <img src={uploadPreview} alt="bike handle bars" className='upload-thumbnail__image' />
+            </div>
 
-            <form className="upload" onSubmit={(event) => handleSubmit(event)}>
+            <form className="upload">
                 <label className="upload__title">TITLE YOUR VIDEO
 
                     {/* onChange={() => setTitle(e.target.value)} */}
-                    <input type='text' name="title" placeholder="Add a title to your video" className="upload__title__text" onChange={(event) => setTitle(event.target.value)}></input>
+                    <input type='text' name="title" placeholder="Add a title to your video" className="upload__title__text"></input>
 
                 </label>
 
                 <label className="upload__description">ADD A VIDEO DESCRIPTION
 
                     {/* onChange={() => setDescription(e.target.value)} */}
-                    <textarea type='text' name="description" placeholder="Add a description to your video" className="upload__description__text" onChange={(event) => setDescription(event.target.value)}></textarea>
+                    <textarea type='text' name="description" placeholder="Add a description to your video" className="upload__description__text" ></textarea>
 
                 </label>
 
 
                 {/* Add a SetTimeout to this onClick */}
-                <button className='upload__button' onClick={() => navigate("/")}>PUBLISH</button>
+                
+                <div className='upload-buttons-container'>
+                    <div className='upload__button-container'>
+                        <button className='upload__button' onClick={() => navigate("/")}>PUBLISH</button>
+                    </div>
 
 
-                <Link to='/' >
-                    <p className='upload__cancel'>CANCEL</p>
-                </Link>
-
+                    <div className='upload-cancel-container'>
+                        <Link className='upload__cancel' to={"/"}>CANCEL</Link>
+                    </div>
+                </div>
 
             </form>
 
