@@ -8,22 +8,17 @@ function Header() {
     
     return (
         <>
-            <header className='header header--mobile'>
+            <header className='header'>
 
-                <Link to='/'>
-                    <div className="header__logo-container">
-                        <img className="header__logo" src={BrainFlix}
-                            alt='BrainFlix logo' />
-                    </div>
+                <Link to='/' className="header__logo-container">
+                    <img className="header__logo" src={BrainFlix} alt='BrainFlix logo' />
                 </Link>
 
                 <div className='header__search'>
-                    <form className='header__form'>
-                        <label className='search'>
-                            <input type='text' placeholder='Search' name='search' className='search__input' />
-                        </label>
-                    </form>
-
+                    
+                    <label className='search'>
+                        <input type='text' placeholder='Search' name='search' className='search__input' />
+                    </label>
 
                     <div>
                         <div className="header-profile__image"></div>
