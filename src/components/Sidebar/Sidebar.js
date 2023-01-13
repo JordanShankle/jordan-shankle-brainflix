@@ -1,27 +1,9 @@
-// import { useState } from 'react';
 import './Sidebar.scss';
-// import videos from '../../data/videos.json';
 import SideBarVid from '../SideBarVid/SideBarVid';
 
 function Sidebar (props) {
 
-
-// const { videoId } = useParams();
-// const [video, setVideo] = useState(null);
-
-// useEffect(() => {
-//     const getVideo = async () => {
-//         const { data } = await axios.get(
-//             `${url}${videoId}`
-//             );
-//             setVideo(data);
-//         }
-        
-//         getVideo();
-//     }, [videoId])
-    
-    
-    // filter all videos so we don't show the selected vid thumbnail
+ // filter all videos so we don't show the selected vid thumbnail
  const filteredVids = props.videos.filter(vid => vid.id !== props.selectedVideo.id)
     
     return (
