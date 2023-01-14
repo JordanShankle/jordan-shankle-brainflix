@@ -6,7 +6,7 @@ import VideoDetails from '../VideoDetails/VideoDetails';
 const MainVideo = ({mainVideo}) => {
 
     return (
-        <section className='main-video-section'>
+        <>
             
             <div className='main-video-container'>
                 <Video image={mainVideo.image}
@@ -25,7 +25,7 @@ const MainVideo = ({mainVideo}) => {
                 numberOfComments={mainVideo.comments} 
             />
 
-        </section>
+        </>
     )
 };
 

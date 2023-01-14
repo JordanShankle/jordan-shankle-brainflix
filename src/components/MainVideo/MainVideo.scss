@@ -19,4 +19,9 @@
         width: 90%;
         height: 50vw;
     }
+
+    @include desktop {
+        width: 65%;
+        height: 35vw;
+    }
 }

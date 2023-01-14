@@ -21,3 +21,18 @@ body {
     margin: 0;
 }
 
+.loading {
+    font-size: 5rem;
+    margin: 2.5rem;
+    display: flex;
+    justify-content: center;
+    color: $brainflix-dark-blue;
+
+    @include tablet {
+        font-size: 10rem;
+    }
+
+    @include desktop {
+        font-size: 12rem;
+    }
+}

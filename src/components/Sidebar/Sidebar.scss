@@ -14,6 +14,14 @@
         margin: 1.6rem;
     }
 
+    @include desktop {
+        border-left: 0.2rem solid $mercury;
+        position: relative;
+        left: 76rem;
+        bottom: 69.6rem;
+        width: 27%;
+    }
+
     &-title {
         color: $silver;
         font-weight: 400;

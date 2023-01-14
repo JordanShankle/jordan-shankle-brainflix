@@ -57,7 +57,7 @@ function HomePage() {
 
   // Loading state while Video's data loads
   if (!videos || !selectedVideoDetails) {
-    return <div>loading...</div>
+    return <div className="loading">loading...</div>
   }
 
 

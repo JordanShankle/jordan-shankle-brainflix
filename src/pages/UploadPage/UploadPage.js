@@ -8,12 +8,9 @@ function UploadPage() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Working...');
         navigate('/')
         alert('Upload successful!')
     }
-
-
 
     return (
         <>

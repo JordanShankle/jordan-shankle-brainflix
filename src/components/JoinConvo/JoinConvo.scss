@@ -12,6 +12,11 @@
     @include tablet {
         padding: 0 2.4rem;
     }
+
+    @include desktop {
+        width: 61.5%;
+        padding: 0 0 0 8.0rem;
+    }
 }
 
 // Form
@@ -56,15 +61,11 @@
     flex-direction: column;
     margin-bottom: 1.4rem;
     font-size: 1.3rem;
+
+    @include desktop {
+        padding-left: 2.4rem;
+    }
 }
-
-// label {
-//     display: flex;
-//     flex-direction: column;
-//     margin-bottom: 2rem;
-// }
-
-
 
 .add-comment {
     background-color: $alabaster;
@@ -79,5 +80,9 @@
     @include tablet {
         height: 4.1rem;
         width: 46rem;
+    }
+
+    @include desktop {
+        width: 43rem;
     }
 }

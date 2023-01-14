@@ -25,6 +25,10 @@
         padding: 1.4rem;
         width: 100%;
 
+        @include desktop {
+            padding: 1.4rem 3.6rem;
+        }
+
         &__pic {
             background-color: $mercury;
             width: 3.6rem;
@@ -81,6 +85,10 @@
             margin-top: 2rem;
             font-size: 1.3rem;
             padding-left: 2rem;
+        }
+
+        @include desktop {
+            margin-right: 1.3rem;
         }
     }
 }
