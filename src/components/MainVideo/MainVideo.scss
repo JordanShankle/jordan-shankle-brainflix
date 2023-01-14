@@ -4,7 +4,7 @@
 
 .main-video-container {
     background-color: $brainflix-dark-black;
-    width: 95vw;
+    
 }
 
 .main-video {
@@ -12,4 +12,8 @@
     margin: auto;
     width: 100%;
     object-fit: contain;
+
+    @include tablet {
+        width: 90%;
+    }
 }

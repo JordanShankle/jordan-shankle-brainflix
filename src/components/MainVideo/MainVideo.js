@@ -9,9 +9,12 @@ const MainVideo = ({mainVideo}) => {
         <section className='main-video-section'>
             
             <div className='main-video-container'>
-                <Video image={mainVideo.image}/>
+                <Video image={mainVideo.image}
+                />
+            {/* <img src={scrubIcon} alt='scrub' /> */}
             </div>
-            
+
+
             <VideoDetails 
                 title={mainVideo.title}
                 channel={mainVideo.channel}
@@ -20,7 +23,7 @@ const MainVideo = ({mainVideo}) => {
                 likes={mainVideo.likes} 
                 description={mainVideo.description}
                 numberOfComments={mainVideo.comments} 
-                />
+            />
 
         </section>
     )

@@ -4,6 +4,7 @@ function Video({ image }) {
         <video
             className='main-video'
             poster={image}
+            controls
             />
 
     )
