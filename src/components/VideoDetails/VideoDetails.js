@@ -22,12 +22,15 @@ function VideoDetails({ title, videoId, channel, views, timestamp, likes, descri
 
 
                     <div className='video-details-info'>
+
+                        
                         <div className='video-details-info__views'>
-                            <img src={viewsIcon} alt="views icon" />{views}
+                        <img src={viewsIcon} alt="views icon" className='views-icon' />
+                            {views}
                         </div>
                         
-                        <div className='video-details-right__likes'>
-                            <img src={likesIcon} alt="views icon" className='likes__icon' />{likes}
+                        <div className='video-details-info__likes'>
+                            <img src={likesIcon} alt="views icon" className='likes-icon' />{likes}
                         </div>
                     </div>
                 </div>

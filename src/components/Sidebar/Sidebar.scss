@@ -2,9 +2,22 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.next-vid-title {
-    color: $silver;
-    font-weight: 400;
-    margin: 1.6rem;
-    font-size: 1.4rem;
+
+
+.sidebar {
+    
+    
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin: 1.6rem;
+    }
+
+    &-title {
+        color: $silver;
+        font-weight: 400;
+        margin: 1.6rem;
+        font-size: 1.4rem;
+    }
 }

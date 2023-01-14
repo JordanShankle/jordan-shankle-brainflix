@@ -75,5 +75,12 @@
         &:hover {
             background-color: $brainflix-dark-blue;  
         }
+
+        @include tablet {
+            width: 15rem;
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            padding-left: 2rem;
+        }
     }
 }

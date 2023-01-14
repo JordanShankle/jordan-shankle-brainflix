@@ -21,6 +21,10 @@
     color: $silver;
     border-bottom: 0.2rem solid $mercury;
 
+    @include tablet {
+        margin: 0;
+    }
+
 
     &__image {
         background-image: url(../../assets/images/Mohan-muruge.jpg);
@@ -41,7 +45,7 @@
 
         @include tablet {
             flex-direction: row;
-            height: fit-content;
+            justify-content: space-between;
         }
     }
 }
@@ -71,4 +75,9 @@
     border-radius: 0.4rem;
     padding: 1.2rem;
     margin-top: 0.4rem;
+
+    @include tablet {
+        height: 4.1rem;
+        width: 46rem;
+    }
 }

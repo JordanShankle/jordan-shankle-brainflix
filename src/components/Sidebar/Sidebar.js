@@ -7,8 +7,9 @@ function Sidebar (props) {
  const filteredVids = props.videos.filter(vid => vid.id !== props.selectedVideo.id)
     
     return (
-        <>
-            <p className='next-vid-title'>NEXT VIDEOS</p>
+        <section className='sidebar'>
+            
+            <p className='sidebar-title'>NEXT VIDEOS</p>
             
             {filteredVids.map((video) => 
                 
@@ -21,7 +22,7 @@ function Sidebar (props) {
                 />
             )}
         
-        </>
+        </section>
 
     )
 };

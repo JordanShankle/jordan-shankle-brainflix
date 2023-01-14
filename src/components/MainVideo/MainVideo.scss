@@ -12,8 +12,11 @@
     margin: auto;
     width: 100%;
     object-fit: contain;
+    aspect-ratio: 1.5;
+    height: 54vw;
 
     @include tablet {
         width: 90%;
+        height: 50vw;
     }
 }

@@ -17,6 +17,11 @@
         margin: 1.6rem;
         color: $silver;
         width: 80%;
+        
+        @include tablet {
+            width: auto;
+            margin: 0 1.6rem;
+        }
     }
 
 
@@ -33,7 +38,13 @@
     }
 
     &-info {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            width: 25%;
+        }
 
+        
         &__channel {
             padding-bottom: 1.6rem;
             font-weight: 600;
@@ -43,6 +54,14 @@
         &__views {
             padding-bottom: 1.6rem;
         }
+
+        &__likes {
+            display: flex;
+
+            @include tablet {
+                display: block;
+            }
+        }
     }
 
 
@@ -50,8 +69,8 @@
         padding-top: 1.6rem;
         border-top: 0.2rem solid $mercury;
         font-size: 1.4rem;
-        margin: auto;
-        width: 90%;
+        margin: 0 1.6rem;
+        // width: 90%;
         
         @include tablet {
             padding-bottom: 2.4rem;
@@ -59,6 +78,37 @@
     }
 
 }
+
+
+.views-icon {
+    padding-right: 0.5rem;
+
+}
+
+.likes-icon {
+    padding-right: 0.5rem;
+}
+// .views-icon {
+//     position: absolute;
+//     right: 11.5rem;
+    
+//     @include tablet {
+//     position: absolute;
+//     right: 21.5rem;
+//     }
+// }
+
+
+// .likes-icon {
+//     position: absolute;
+//     right: 11.5rem;
+
+
+//     @include tablet{
+//     position: absolute;
+//     right: 9.5rem;
+//     }
+// }
 
 .number-comments {
     font-weight: 600;

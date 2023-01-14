@@ -24,9 +24,9 @@ const JoinConvo = ({ selectedVideo }) => {
                     </label>
 
                     {/* Comment Submit Button */}
-                    <div className="comment__button-container">
-                        <input type="submit" value="COMMENT" className="comment__button" />
-                    </div>
+                    
+                        <button type="submit" className="comment__button">COMMENT</button>
+                    
 
                 </div>
             </form>
