@@ -2,28 +2,69 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+
 .video {
     display: flex;
-    padding: 0.5rem 1.6rem;
-    color: black;
-
+    color: $brainflix-dark-black;
+    padding: 0.7rem 1.6rem;
+    font-size: 1.3rem;
+    
     &-link {
         text-decoration: none;
+        font-size: 1.3rem;
     }
 
     &__image {
-        width: 15rem;
-        height: 10rem;
-        border-radius: 4px;
+        width: 14vh;
+        aspect-ratio: 2;
+        border-radius: 0.4rem;
+        object-fit: cover;
     }
+
 
     &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         padding-left: 1.0rem;
-    }
 
-    &-description__title {
-        margin: 0%;
-        font-weight: 600;
-        font-size: 1.3rem;
+        &__title {
+            font-weight: 600;
+        }
     }
 }
+// .video {
+//     display: flex;
+//     padding: 0.5rem 1.6rem;
+//     color: black;
+
+//     &-link {
+//         text-decoration: none;
+//         font-size: 1.3rem;
+//     }
+
+//     &__image {
+//         width: 12rem;
+//         height: 7rem;
+//         border-radius: 4px;
+
+//         // &-container {
+//         //     width: 80%;
+//         // }
+//     }
+
+//     &-description {
+//         padding-left: 1.0rem;
+
+//         &__channel {
+//             margin: 0;
+//             // padding-top: 1.4rem;
+//         }
+//     }
+
+//     &-description__title {
+//         margin: 0%;
+//         font-weight: 600;
+//         font-size: 1.3rem;
+//     }
+// }

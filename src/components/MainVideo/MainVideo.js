@@ -6,9 +6,12 @@ import VideoDetails from '../VideoDetails/VideoDetails';
 const MainVideo = ({mainVideo}) => {
 
     return (
-        <section className='main-video-container'>
+        <section className='main-video-section'>
             
-            <Video image={mainVideo.image}/>
+            <div className='main-video-container'>
+                <Video image={mainVideo.image}/>
+            </div>
+            
             <VideoDetails 
                 title={mainVideo.title}
                 channel={mainVideo.channel}

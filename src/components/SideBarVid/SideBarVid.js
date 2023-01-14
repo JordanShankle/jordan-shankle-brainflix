@@ -9,13 +9,12 @@ function SideBarVid({ videoId, image, title, channel }) {
         
             <section className='video' key={videoId}  >
 
-                <div className='video-image-container'>
-                    <img className='video__image' src={image} alt="video" />
-                </div>
+                
+                <img className='video__image' src={image} alt="video" />
 
                 <div className="video-description">
-                    <h6 className="video-description__title">{title}</h6>
-                    <p className="video-description__channel">{channel}</p>
+                    <span className="video-description__title">{title}</span>
+                    <span className="video-description__channel">{channel}</span>
                 </div>
 
             </section>

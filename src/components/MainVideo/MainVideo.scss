@@ -5,6 +5,12 @@
 .main-video {
     display: flex;
     margin: auto;
-    width: 100%;
-    
+    width: 100vw;
+    object-fit: contain;
+}
+
+.main-video-container {
+    background-color: $brainflix-dark-black;
+    width: 100vw;
+    height: 56vw;
 }

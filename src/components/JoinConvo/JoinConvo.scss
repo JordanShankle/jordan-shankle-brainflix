@@ -8,6 +8,12 @@
     color: $silver;
 }
 
+.conversation-container {
+    @include tablet {
+        padding: 0 2.4rem;
+    }
+}
+
 // Form
 .form {
     display: flex;
