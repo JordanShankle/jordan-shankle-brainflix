@@ -19,7 +19,7 @@ const JoinConvo = ({ selectedVideo }) => {
                 <div className="form__input">
 
                     {/* Comment input */}
-                    <label>JOIN THE CONVERSATION
+                    <label className='join-convo'>JOIN THE CONVERSATION
                         <textarea name="comment" placeholder="Add a new comment" className="add-comment"></textarea>
                     </label>
 

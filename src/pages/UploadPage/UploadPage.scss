@@ -127,6 +127,10 @@
         background-position-x: 1rem;
         background-repeat: no-repeat;
 
+        &:hover {
+            background-color: $brainflix-dark-blue;  
+        }
+
         @include tablet {
             width: 18rem;
         }

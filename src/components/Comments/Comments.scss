@@ -16,12 +16,13 @@
     &-container {
         border-bottom: 0.2rem solid $mercury;
         display: flex;
+        font-size: 1.4rem;
     }
     
     &__card {
         display: flex;
         flex-direction: column;
-        margin: 1.6rem;
+        padding: 1.4rem;
         width: 100%;
 
         &__pic {
@@ -66,9 +67,13 @@
         border-radius: 0.4rem;
         margin-bottom: 1.6rem;
         border: none;
+        background-image: url('../../assets/icons/add_comment.svg');
+        background-position-y: center;
+        background-position-x: 1rem;
+        background-repeat: no-repeat;
 
         &:hover {
-            background-color: $brainflix-blue;
+            background-color: $brainflix-dark-blue;  
         }
     }
 }
