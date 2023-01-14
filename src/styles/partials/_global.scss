@@ -24,6 +24,7 @@ body {
 .loading {
     font-size: 5rem;
     margin: 2.5rem;
+    padding-top: 5rem;
     display: flex;
     justify-content: center;
     color: $brainflix-dark-blue;
@@ -33,6 +34,7 @@ body {
     }
 
     @include desktop {
+        padding-top: 10rem;
         font-size: 12rem;
     }
 }

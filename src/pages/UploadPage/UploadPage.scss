@@ -16,6 +16,11 @@
             font-size: 3.3rem;
             padding: 2.4rem;
         }
+
+        @include desktop {
+            border: none;
+            padding: 2.4rem 8.0rem;
+        }
     }
 
     &-thumbnail {
@@ -23,6 +28,10 @@
 
         @include tablet {
             padding: 0 2.4rem;
+        }
+
+        @include desktop {
+            padding: 0;
         }
 
         &__title {
@@ -37,6 +46,10 @@
                 border-top: 0.2rem solid $mercury;
                 padding: 2.4rem 0 0.5rem 0;
             }
+
+            @include desktop {
+                margin: 0 8.0rem;
+            }
     
         }
 
@@ -46,6 +59,10 @@
 
             @include tablet {
                 width: 40rem;
+            }
+
+            @include desktop {
+                margin: 0 8.0rem;
             }
         }
     }

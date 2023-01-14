@@ -12,6 +12,9 @@
         padding: 1.6rem 2.4rem 0 2.4rem;
     }
 
+    @include desktop {
+        border: 0.2rem solid $mercury;
+    }
 
     &__logo-container {
         display: flex;
@@ -29,6 +32,11 @@
         display: flex;
         justify-content: space-around;
         width: 100%;
+
+        @include desktop {
+         justify-content: flex-end;   
+         width: 70%;
+        }
     }
     
     &-profile__image {
@@ -62,7 +70,7 @@
         @include tablet {
             flex-grow: 0;
         }
-    
+
 
     &__input {
         height: 3rem;
