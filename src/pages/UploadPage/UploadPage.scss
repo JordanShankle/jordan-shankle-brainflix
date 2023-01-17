@@ -15,7 +15,7 @@
         flex-direction: column;
 
         @include desktop {
-            flex-direction: column;
+            flex-direction: row;
         }
     }
     
