@@ -13,6 +13,10 @@
     &-section {
         display: flex;
         flex-direction: column;
+
+        @include desktop {
+            flex-direction: column;
+        }
     }
     
     &-title {
