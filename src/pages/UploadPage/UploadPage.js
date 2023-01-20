@@ -1,15 +1,27 @@
 import './UploadPage.scss';
 import uploadPreview from '../../assets/images/Upload-video-preview.jpg';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function UploadPage() {
 
     const navigate = useNavigate();
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         navigate('/')
         alert('Upload successful!')
+    }
+
+    const handleTitleChange = (event) => {
+        setTitle(event.target.value)
+    }
+
+    const handleDescriptionChange = (event) => {
+        setDescription(event.target.value)
+        console.log(description)
     }
 
     return (
@@ -29,13 +41,24 @@ function UploadPage() {
 
                     <label className="upload__title">TITLE YOUR VIDEO
 
-                        <input type='text' name="title" placeholder="Add a title to your video" className="upload__title__text"></input>
+                        <input 
+                            value={title}
+                            onChange={handleTitleChange} 
+                            type='text' 
+                            name="title" 
+                            placeholder="Add a title to your video" className="upload__title__text" 
+                        />
 
                     </label>
 
                     <label className="upload__description">ADD A VIDEO DESCRIPTION
 
-                        <textarea type='text' name="description" placeholder="Add a description to your video" className="upload__description__text" ></textarea>
+                        <textarea 
+                            value={description}
+                            onChange={handleDescriptionChange}
+                            type='text' 
+                            name="description" 
+                            placeholder="Add a description to your video" className="upload__description__text" ></textarea>
 
                     </label>
 
