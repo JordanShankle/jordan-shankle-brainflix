@@ -9,10 +9,10 @@ import JoinConvo from '../../components/JoinConvo/JoinConvo';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
 // API
-const BASE_API_URL = 'https://project-2-api.herokuapp.com/';
-const API_KEY = 'eaf1ac38-9344-4d16-9027-16b9fd369494';
-const query = "videos";
-const url = `${BASE_API_URL}${query}?api_key=${API_KEY}`;
+// const BASE_API_URL = 'https://project-2-api.herokuapp.com/';
+// const API_KEY = 'eaf1ac38-9344-4d16-9027-16b9fd369494';
+// const query = "videos";
+// const url = `${BASE_API_URL}${query}?api_key=${API_KEY}`;
 
 
 function HomePage() {
@@ -26,7 +26,7 @@ function HomePage() {
   useEffect(() => {
     const getVideos = async () => {
       const { data } = await axios.get(
-        `${url}`
+        'http://localhost:8080/videos'
       );
       setVideos(data);
     }
@@ -39,7 +39,7 @@ function HomePage() {
   useEffect(() => {
 
     const id = videoId || '84e96018-4022-434e-80bf-000ce4cd12b8'
-    const url = `${BASE_API_URL}videos/${id}?api_key=${API_KEY}`
+    const url = `http://localhost:8080/videos/${id}`
 
     const getVideo = async () => {
       const { data } = await axios.get(
