@@ -8,12 +8,6 @@ import MainVideo from '../../components/MainVideo/MainVideo';
 import JoinConvo from '../../components/JoinConvo/JoinConvo';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
-// API
-// const BASE_API_URL = 'https://project-2-api.herokuapp.com/';
-// const API_KEY = 'eaf1ac38-9344-4d16-9027-16b9fd369494';
-// const query = "videos";
-// const url = `${BASE_API_URL}${query}?api_key=${API_KEY}`;
-
 
 function HomePage() {
 

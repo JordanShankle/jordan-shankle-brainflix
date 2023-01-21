@@ -2,20 +2,14 @@ import './UploadPage.scss';
 import uploadPreview from '../../assets/images/Upload-video-preview.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// import { useState } from 'react';
 
 function UploadPage() {
 
     const navigate = useNavigate();
-    // const [title, setTitle] = useState("");
-    // const [description, setDescription] = useState("");
-
 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(event.target.title.value)
-        console.log(event.target.description.value)
         
         // Add POST request
         const title = event.target.title.value;
@@ -52,8 +46,6 @@ function UploadPage() {
                     <label className="upload__title">TITLE YOUR VIDEO
 
                         <input 
-                            // value={title}
-                            // onChange={handleTitleChange} 
                             type='text' 
                             name="title" 
                             placeholder="Add a title to your video" className="upload__title__text" 
@@ -64,8 +56,6 @@ function UploadPage() {
                     <label className="upload__description">ADD A VIDEO DESCRIPTION
 
                         <textarea 
-                            // value={description}
-                            // onChange={handleDescriptionChange}
                             type='text' 
                             name="description" 
                             placeholder="Add a description to your video" className="upload__description__text" ></textarea>

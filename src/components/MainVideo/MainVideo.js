@@ -11,7 +11,6 @@ const MainVideo = ({mainVideo}) => {
             <div className='main-video-container'>
                 <Video image={mainVideo.image}
                 />
-            {/* <img src={scrubIcon} alt='scrub' /> */}
             </div>
 
 
