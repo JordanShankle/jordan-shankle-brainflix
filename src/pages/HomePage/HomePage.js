@@ -21,9 +21,13 @@ function HomePage() {
     const getVideos = async () => {
       const { data } = await axios.get(
         'http://localhost:8080/videos'
-      );
+      )
+      .catch((error) => {
+        return <div>There was an ${error.message}</div>  
+      })
       setVideos(data);
     }
+    
 
     getVideos();
   }, [])

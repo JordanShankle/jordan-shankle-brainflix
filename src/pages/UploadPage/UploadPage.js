@@ -22,6 +22,9 @@ function UploadPage() {
             }).then((response) => {
                 console.log(response)
             })
+            .catch((error) => {
+              return <div>There was an ${error.message}</div>  
+            })
         navigate('/') 
         alert('Upload successful!')
     }
